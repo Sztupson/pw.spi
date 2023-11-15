@@ -19,5 +19,5 @@ git checkout -b nazwa-brancha
 git branch nazwa-brancha
 # lista branchy
 git branch
-# usuwanie brancha 
+# usuwanie brancha aa
 git branch -d nazwa-brancha
