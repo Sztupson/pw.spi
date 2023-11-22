@@ -1,7 +1,7 @@
 # python -m ensurepip --upgrade
 # pip install regex
 
-# import re
+import re
 
 # txt = "Dopasowuje pozycję, która nie jest granicą słowa."
 
@@ -62,13 +62,13 @@
 # print(x)
 
 
-# text = "Mój numer to 605-456-7890"
-# x = re.search(r"\d{3}-\d{3}-\d{4}", text)
-# print(x)
+text = "Mój numer to 605-456-7890"
+x = re.search(r"\d{3}-\d{3}-\d{4}", text)
+print(x)
 
-# x = re.search(r"\b[4-8][0-9]{2}-\d{3}-\d{4}", text)
-# print(x)
+x = re.search(r"\b[4-8][0-9]{2}-\d{3}-\d{4}", text)
+print(x)
 
-# link = "Odwiedź https://www.example.com i http://www.anotherdomain.org."
-# domain_names = re.findall(r"https?://www\.(\w+)", link)
-# print(domain_names)
+link = "Odwiedź https://www.example.com i http://www.anotherdomain.org."
+domain_names = re.findall(r"https?://www\.(\w+)", link)
+print(domain_names)
