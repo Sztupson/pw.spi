@@ -39,9 +39,13 @@ def add_entry(name, phone_number:str):
 # Sprawdza format numeru oraz czy numer już istnieje.
 
 def remove_entry(phone_number):
+    nowa_lista = []
     for entry in read_phonebook():
-        if phone_number in entry:
-            print('ss')
+        if phone_number not in entry:
+            nowa_lista.append(entry)
+    save_phonebook(nowa_lista)
+    # save_phonebook([entry for entry in read_phonebook() if phone_number not in entry])
+    # ^ to samo tylko w jednej linijce
 
 # Usuwa wpis na podstawie numeru telefonu.
 
@@ -64,3 +68,13 @@ read_phonebook
 display_phonebook()
 add_entry("Krzysztof", "123456789")
 display_phonebook()
+
+
+while True
+    print("0. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "0":
+        print("Exit")
+        break
