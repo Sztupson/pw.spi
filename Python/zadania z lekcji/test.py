@@ -68,42 +68,63 @@
 # animal_speak(dog)
 
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Shape(ABC):
+# class Shape(ABC):
 
-    @abstractmethod
-    def area(self):
-        pass
+#     @abstractmethod
+#     def area(self):
+#         pass
 
-    @abstractmethod
-    def perimeter(self):
-        pass
+#     @abstractmethod
+#     def perimeter(self):
+#         pass
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
 
-    def area(self):
-        return 3.14 * self.radius
+#     def area(self):
+#         return 3.14 * self.radius
     
-    def perimeter(self):
-        return 2 * 3.14 * self.radius
+#     def perimeter(self):
+#         return 2 * 3.14 * self.radius
     
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+# class Rectangle(Shape):
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
 
-    def area(self):
-        return self.height * self.width
-    def perimeter(self):
-        return 2 * (self.width + self.height)
+#     def area(self):
+#         return self.height * self.width
+#     def perimeter(self):
+#         return 2 * (self.width + self.height)
     
-circle = Circle(5)
-rectangle = Rectangle(4,5)
+# circle = Circle(5)
+# rectangle = Rectangle(4,5)
 
-print("Pole koła: ", circle.area())
-print("Obwód koła: ", circle.perimeter())
-print("Pole prostokąta: ", rectangle.area())
-print("Obwód prostokąta: ", rectangle.perimeter())
+# print("Pole koła: ", circle.area())
+# print("Obwód koła: ", circle.perimeter())
+# print("Pole prostokąta: ", rectangle.area())
+# print("Obwód prostokąta: ", rectangle.perimeter())
+
+
+
+
+# str()
+# __str__
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self) -> str:
+        return f"{self.name}, {self.age} lat"
+
+    def __len__(self):
+        return len(self.name)
+
+person = Person("Wiktor", 30)
+print(person)
+print(len(person))
