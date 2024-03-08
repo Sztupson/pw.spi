@@ -56,53 +56,97 @@
 
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct vector3D {
-    int components[3];
-    int size;
-};
+// struct vector3D {
+//     int components[3];
+//     int size;
+// };
 
-struct vector3D initV3D(struct vector3D v){
-    v.size = 3;
-    for(int i=0;i<v.size;i++){
-        v.components[i]=1;
-    }
-    return v;
-}
+// struct vector3D initV3D(struct vector3D v){
+//     v.size = 3;
+//     for(int i=0;i<v.size;i++){
+//         v.components[i]=1;
+//     }
+//     return v;
+// }
 
-struct vector3D addV3D(struct vector3D x,struct vector3D y){
-    int s;
-    struct vector3D z;
-    z.size = x.size;
+// struct vector3D addV3D(struct vector3D x,struct vector3D y){
+//     int s;
+//     struct vector3D z;
+//     z.size = x.size;
 
-    for (s = 0; s < z.size; s++){
-        z.components[s] = x.components[s] + y.components[s];
-    }
-    return z;
-}
+//     for (s = 0; s < z.size; s++){
+//         z.components[s] = x.components[s] + y.components[s];
+//     }
+//     return z;
+// }
 
-void printV3D(struct vector3D v){ // mozna tez zapisac jako:   struct vector3D printV3D(struct vector3D v){ 
-    for(int i=0;i<v.size;i++){
-        printf("%d ", v.components[i]);
-    }
-    printf("\n");
-}
+// void printV3D(struct vector3D v){ // mozna tez zapisac jako:      struct vector3D printV3D(struct vector3D v){ 
+//     for(int i=0;i<v.size;i++){
+//         printf("%d ", v.components[i]);
+//     }
+//     printf("\n");
+// }
 
-int main(){
-    struct vector3D v1, v2={{4,5,6},3}, v;
+// int main(){
+//     struct vector3D v1, v2={{4,5,6},3}, v;
     
-    v1.size = 3;
-    v1.components[0] = 1;
-    v1.components[1] = 2;
-    v1.components[2] = 3;
+//     v1.size = 3;
+//     v1.components[0] = 1;
+//     v1.components[1] = 2;
+//     v1.components[2] = 3;
     
-    printV3D(v1);
-    printV3D(v2);
+//     printV3D(v1);
+//     printV3D(v2);
     
-    v = addV3D(v1,v2);
+//     v = addV3D(v1,v2);
     
-    printV3D(v);
+//     printV3D(v);
     
-    return 0;
-}
+//     return 0;
+// }
+
+// //==========================================
+//                // ENUMERATE //
+// //==========================================
+
+
+// #include <stdio.h>
+
+// enum boolean {TRUE, FALSE};
+// enum dniTygodnia {PN,WT,SR,CZ,PT,SB,ND};
+
+
+// int main(){
+//     enum boolean x;
+    
+//     enum dniTygodnia dzien;
+    
+//     dzien = PT;
+    
+//     switch(dzien){
+//         case PN:
+//         printf("Poniedzialek");
+//         break;
+//         case WT:
+//         printf("Wtorek");
+//         break;
+//         case SR:
+//         printf("Sroda");
+//         break;
+//         case CZ:
+//         printf("Czwartek");
+//         break;
+//         case PT:
+//         printf("Piatek");
+//         break;
+//         case SB:
+//         printf("Sobota");
+//         break;
+//         case ND:
+//         printf("Niedziela");
+//         break;
+//     }
+//     return 0;
+// }
