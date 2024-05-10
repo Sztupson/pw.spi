@@ -1,19 +1,19 @@
-# tree = [1,2,3,4,5,6,7]
+tree = [1,2,3,4,5,6,7]
 
-# def get_left_child(index):
-#     return 2 * index + 1
-# def get_right_child(index):
-#     return 2 * index + 2
-# def get_parent(index):
-#     return (index - 1) // 2
+def get_left_child(index):
+    return 2 * index + 1
+def get_right_child(index):
+    return 2 * index + 2
+def get_parent(index):
+    return (index - 1) // 2
 
-# index = 0 # korzeń drzewa 
-# left_child_index = get_left_child(index)
-# right_child_index = get_right_child(index)
+index = 0 # korzeń drzewa 
+left_child_index = get_left_child(index)
+right_child_index = get_right_child(index)
 
-# print(f"Wartość korzenia: {tree[index]}")
-# print(f"Lewe dziecko korzenia: {tree[left_child_index]}")
-# print(f"Prawe dziecko korzenia: {tree[right_child_index]}")
+print(f"Wartość korzenia: {tree[index]}")
+print(f"Lewe dziecko korzenia: {tree[left_child_index]}")
+print(f"Prawe dziecko korzenia: {tree[right_child_index]}")
 
 class Node:
     def __init__(self, value):
@@ -27,6 +27,13 @@ def dfs_preorder(node):
         dfs_preorder(node.left)
         dfs_preorder(node.right)
 
+# Drzewo:
+#      1
+#     / \
+#    2   3
+#   / \
+#  4   5
+        
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
